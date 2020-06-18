@@ -8,92 +8,92 @@
       
  <div class="flex items-stretch bg-purple-900 h-24">
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">%</button>
+      <button @click="percentage" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">%</button>
     </div>
   
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">(</button>
+      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">(</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">)</button>
+      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">)</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">÷</button>
+      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">÷</button>
     </div>
 </div>
       
 <div class="flex items-stretch bg-purple-900 h-24">
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">7</button>
+      <button @click="append('7')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">7</button>
     </div>
   
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">8</button>
+      <button @click="append('8')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">8</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">9</button>
+      <button @click="append('9')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">9</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">×</button>
+      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">×</button>
     </div>
 </div>
       
 <div class="flex items-stretch bg-purple-900 h-24">
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">4</button>
+      <button @click="append('4')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">4</button>
     </div>
   
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">5</button>
+      <button @click="append('5')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">5</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">6</button>
+      <button @click="append('6')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">6</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">-</button>
+      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">-</button>
     </div>
 </div>
       
 <div class="flex items-stretch bg-purple-900 h-24">
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">1</button>
+      <button @click="append('1')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">1</button>
     </div>
   
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">2</button>
+      <button @click="append('2')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">2</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">3</button>
+      <button @click="append('3')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">3</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">+</button>
+      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">+</button>
     </div>
 </div>
       
 
 <div class="flex items-stretch bg-purple-900 h-24 mb-4">
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button @click="clear" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">C</button>
+      <button @click="clear" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">C</button>
     </div>
   
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">0</button>
+      <button @click="append('0')" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">0</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-lg">.</button>
+      <button @click="dot" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">.</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-orange-500 justify-center shadow-lg">=</button>
+      <button class="rounded-full h-20 w-20 flex items-center bg-orange-500 justify-center shadow-xl border-2 border-orange-600">=</button>
     </div>
 </div>
       
@@ -106,12 +106,24 @@
 export default {
     data() {
       return {
-        current: '12333',
+        current: '',
       }
     },
     methods: {
-      clear(){
+      clear() {
         this.current = '';
+      },
+      percentage() {
+        this.current = `${parseFloat(this.current) / 100}`
+      },
+      append(number) {
+        this.current = `${this.current} ${number}`;
+      },
+      dot() {
+        console.log(this.current.indexOf('.'))
+        if (this.current.indexOf('.') === -1) {
+          this.append('.');
+        }
       }
     }
 }
