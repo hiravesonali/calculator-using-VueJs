@@ -3,7 +3,7 @@
     <div class="">
       <div class="p-5 text-white text-center text-3xl bg-purple-900"><span class="text-orange-500">Calcu</span>lator</div>
       <div class="pt-16 p-5 pb-0 text-white text-right text-3xl bg-purple-800">{{ current || '00' }}</div>
-      <div class="p-5 text-white text-right text-3xl bg-purple-800">= <span class="text-orange-500">2100</span></div>
+      <div class="p-5 text-white text-right text-3xl bg-purple-800">= <span class="text-orange-500">{{ equalsTo || '00' }}</span></div>
       
       
  <div class="flex items-stretch bg-purple-900 h-24">
@@ -12,11 +12,11 @@
     </div>
   
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">(</button>
+      <button @click="sign" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">+/-</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">)</button>
+      <button @click="remove" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">Del</button>
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
@@ -110,21 +110,30 @@ export default {
         current: '',
         operator: null,
         operatorClicked: false,
+        equalsTo: '',
       }
     },
     methods: {
       clear() {
         this.current = '';
+        this.equalsTo = ''; 
       },
       percentage() {
         this.current = `${parseFloat(this.current) / 100}`
       },
+      sign() {
+        this.current = this.current.charAt(0) === '-' ?
+         this.current.slice(1) : `-${this.current}`;
+      },
+      remove() {
+        this.current = this.current.slice(0, -1);
+      }, 
       append(number) {
         if (this.operatorClicked) {
           this.current = '';
           this.operatorClicked = false;
         }
-        this.current = `${this.current} ${number}`;
+        this.current = `${this.current}${number}`;
       },
       dot() {
         if (this.current.indexOf('.') === -1) {
@@ -156,6 +165,7 @@ export default {
           parseFloat(this.previous), 
           parseFloat(this.current)
           )}`;
+          this.equalsTo = this.current;
           this.previous = null;
       }
     }
