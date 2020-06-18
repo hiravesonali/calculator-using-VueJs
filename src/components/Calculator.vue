@@ -20,7 +20,7 @@
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">÷</button>
+      <button @click="divide" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">÷</button>
     </div>
 </div>
       
@@ -38,7 +38,7 @@
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">×</button>
+      <button @click="multiply" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">×</button>
     </div>
 </div>
       
@@ -56,7 +56,7 @@
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">-</button>
+      <button @click="minus" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">-</button>
     </div>
 </div>
       
@@ -74,7 +74,7 @@
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">+</button>
+      <button @click="add" class="rounded-full h-20 w-20 flex items-center bg-purple-800 justify-center shadow-xl border-2 border-purple-700">+</button>
     </div>
 </div>
       
@@ -93,7 +93,7 @@
     </div>
    
     <div class="flex-1 px-2 py-2 justify-center flex items-center text-white text-2xl font-semibold">
-      <button class="rounded-full h-20 w-20 flex items-center bg-orange-500 justify-center shadow-xl border-2 border-orange-600">=</button>
+      <button @click="equal" class="rounded-full h-20 w-20 flex items-center bg-orange-500 justify-center shadow-xl border-2 border-orange-600">=</button>
     </div>
 </div>
       
@@ -107,6 +107,7 @@ export default {
     data() {
       return {
         current: '',
+        operator: '',
       }
     },
     methods: {
@@ -120,10 +121,24 @@ export default {
         this.current = `${this.current} ${number}`;
       },
       dot() {
-        console.log(this.current.indexOf('.'))
         if (this.current.indexOf('.') === -1) {
           this.append('.');
         }
+      },
+      divide() {
+        this.operator = (a, b) => a / b;
+      },
+      multiply() {
+        this.operator = (a, b) => a * b;
+      },
+      minus() {
+        this.operator = (a, b) => a - b;
+      },
+      add() {
+        this.operator = (a, b) => a + b;
+      },
+      equal() {
+
       }
     }
 }
